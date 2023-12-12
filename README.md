@@ -51,7 +51,6 @@ To run the application on your local machine:
 
 2. **Start the Flask server**
 
-
 ## Deployment
 
 Instructions on how to deploy the project on a live system (e.g., Heroku):
@@ -69,7 +68,7 @@ Please read [CONTRIBUTING.md](https://link-to-your-contributing.md) for details 
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://your-repository-url/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/oarina/AI-in-flask.git).
 
 ## Authors
 
