@@ -15,14 +15,13 @@ def index():
 def about():
     return render_template("about.html")
 
-@app.route("/test")
-def test():
-    test_message = "Hello from Flask!"
-    return render_template("test.html", message=test_message)
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
 
 
 if __name__ == "__main__":
     app.run(
         host=os.environ.get("IP", "0.0.0.0"), #  looking for ip vaariable if it exists
-        port=int(os.environ.get("PORT", "8081")), # this port works http://172.20.10.3:8080/ 
+        port=int(os.environ.get("PORT", "8082")), # this port works http://172.20.10.3:8080/ 
         debug=True) # WARNING !!!! never have debug as True in a production application!!!!
