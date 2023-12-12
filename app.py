@@ -11,9 +11,16 @@ app = Flask (__name__) # creating an istance of this class and storing it in a v
 def index():
     return render_template("index.html") # binds to itself. 
 
+
 @app.route("/about")
 def about():
     return render_template("about.html")
+
+
+@app.route("/careers")
+def careers():
+    return render_template("careers.html")
+
 
 @app.route("/contact")
 def contact():
