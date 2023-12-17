@@ -1,4 +1,30 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1>Home Page</h1>
+    <h1>Task helper</h1>
+    <!--  will be using id="taskInput" to identify input-->
+    <form id="taskForm">
+        <input type="text" id="taskInput" placeholder="Enter your task here">
+        <button type="submit">Break Down Task</button>
+    </form>
+    <div id="taskDisplay"></div> 
+
+    <!-- below section where above task input would be caputred -->
+    <div id="capturedText"></div>
+
+    <!-- This is where the future subtasks would go -->
+    <div id="subTasks"></div>
+
+    <script>
+        // We don't want the form to redirect to another page so below will prevent it
+        document.getElementById('taskForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Corrected syntax here
+
+            // if a key is pressed in the above input, a variable is created with the contents of the input. And a div below is used to print out the caputred text
+            // this is very basic at the moment and if you input another text that will be replaced again with the newer text. 
+            var task = document.getElementById("taskInput").value;
+            document.getElementById("capturedText").innerText = task;
+            console.log("Form submitted, text captured: " + task); // For debugging
+        });
+    </script>
+  
 {% endblock %}
